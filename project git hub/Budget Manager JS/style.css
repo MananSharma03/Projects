@@ -1,0 +1,238 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #F2E5D2;
+}
+.wrapper {
+  width: 90%;
+  font-size: 16px;
+  max-width: 43.75em;
+  margin: 1em auto;
+}
+.container {
+  width: 100%;
+}
+.sub-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper h3 {
+  color: #363d55;
+  font-weight: 500;
+  margin-bottom: 0.6em;
+}
+.container input {
+  display: block;
+  width: 100%;
+  padding: 0.6em 0.3em;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.3em;
+  color: #414a67;
+  outline: none;
+  font-weight: 400;
+  margin-bottom: 0.6em;
+}
+.container input:focus {
+  border-color: #0f1315;
+}
+.total-amount-container,
+.user-amount-container {
+  background-color: #ffffff;
+  padding: 1.25em 0.9em;
+  border-radius: 0.3em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+}
+
+
+/* .output-container {
+  background-color: #17a2ff;
+  color: #ffffff;
+  border-radius: 0.3em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  margin: 2em 0;
+  padding: 1.2em;
+} */
+
+.output-container {
+  background-color: #01395E;
+  color: #ffffff;
+  border-radius: 0.3em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  margin: 2em 0;
+  padding: 1.2em;
+  display: flex; /* Add Flexbox */
+  justify-content: space-around; /* Evenly space items */
+  align-items: center; /* Center items vertically */
+}
+
+.output-container div {
+  text-align: center; /* Center text */
+  flex: 1; /* Equal width */
+}
+
+/* Style for the paragraphs */
+.output-container p {
+  margin-bottom: 0.5em; /* Adjust spacing */
+}
+/* 
+.output-container p {
+  font-weight: 500;
+  margin-bottom: 0.6em;
+} */
+.output-container span {
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  color: #e5e5e5;
+}
+
+/* Custom dropdown styles */
+#expense-category {
+  width: 200px; /* Set width as needed */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none; /* Remove default arrow icon */
+  -webkit-appearance: none; /* For older versions of Chrome and Safari */
+  background-color: #fff; /* Background color */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23444444" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Custom arrow icon */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+
+/* Hover effect */
+#expense-category:hover {
+  border-color: #888;
+}
+
+/* Focus effect */
+#expense-category:focus {
+  outline: none;
+  border-color: #555;
+}
+
+#expenseChart {
+  width: 100%; /* Make the canvas fill its container horizontally */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure it behaves like a block element */
+  margin: 0 auto; /* Center the canvas horizontally */
+  border: 1px solid #ccc; /* Add a border for visibility (optional) */
+  border-radius: 0.3em; /* Add border radius for rounded corners (optional) */
+  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.1); /* Add a subtle shadow (optional) */
+}
+
+
+.submit {
+  font-size: 1em;
+  margin-top: 0.8em;
+  background-color: #8B0E3A;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 0.6em 1.2em;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+.list {
+  background-color: #ffffff;
+  padding: 1.8em 1.2em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  border-radius: 0.6em;
+}
+.sublist-content {
+  width: 100%;
+  border-left: 0.3em solid #01395E;
+  margin-bottom: 0.6em;
+  padding: 0.5em 1em;
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr 1fr;
+}
+.product {
+  font-weight: 500;
+  color: #363d55;
+}
+.amount {
+  color: #414a67;
+  margin-left: 20%;
+}
+.icons-container {
+  width: 5em;
+  margin: 1.2em;
+  align-items: center;
+}
+.product-title {
+  margin-bottom: 1em;
+}
+.hide {
+  display: none;
+}
+.error {
+  color: #ff465a;
+}
+.edit {
+  margin-left: auto;
+}
+.edit,
+.delete {
+  background: transparent;
+  cursor: pointer;
+  margin-right: 1.5em;
+  border: none;
+  color: #01395E;
+}
+@media screen and (max-width: 600px) {
+  .wrapper {
+    font-size: 14px;
+  }
+  .sub-container {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+}
+/* Existing styles */
+/* ... Your existing CSS code ... */
+
+
+.output-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    font-size: 14px;
+  }
+  .total-amount-container,
+  .user-amount-container {
+    flex-direction: column;
+  }
+  .output-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .output-container div {
+    margin-bottom: 1em;
+  }
+  .sublist-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
